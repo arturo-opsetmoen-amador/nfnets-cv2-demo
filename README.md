@@ -8,7 +8,7 @@ Samuel L. Smith, and the arXiv preprint ["High-Performance Large-Scale Image
 Recognition Without Normalization"](http://dpmd.ai/06171) by
 Andrew Brock, Soham De, Samuel L. Smith, and Karen Simonyan.
 
-
+For more details, visit [deep-mind's github repository](https://github.com/deepmind/deepmind-research/tree/master/nfnets)
 
 
 @inproceedings{brock2021characterizing,
@@ -28,3 +28,13 @@ Adaptive Gradient Clipping (AGC) and the NFNets models:
   year={2021}
 }
 
+## Running this demo
+
+### Setup
+Use the setup.sh scrip to get the requirements with pip. This script will also download 
+the F0 NTNet implementation from [this link.](https://storage.googleapis.com/dm-nfnets/F0_haiku.npz)
+
+### Running NFNet on your webcam feed with CV2
+To run the demo, check the output of `echo $DISPLAY` in your console and modify line 
+13 in `main.py` (`os.environ['DISPLAY'] = `). Also, be sure that line 16 in `main.py` 
+points to your webcam capture device (`cap = cv2.VideoCapture(0)`).
